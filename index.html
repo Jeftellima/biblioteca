@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivos com Metadados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Upload de Arquivos com Metadados</h1>
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="arquivo">Selecione o arquivo:</label>
+                <input type="file" id="arquivo" accept=".pdf, .xlsx, .xls" required>
+            </div>
+
+            <div class="metadata-section">
+                <h2>Metadados do Arquivo</h2>
+                <div class="form-group">
+                    <label for="nomeArquivo">Nome do Arquivo:</label>
+                    <input type="text" id="nomeArquivo" required>
+                </div>
+                <div class="form-group">
+                    <label for="extensao">Extensão do Arquivo:</label>
+                    <input type="text" id="extensao" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataCriacao">Data de Criação (opcional):</label>
+                    <input type="date" id="dataCriacao">
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataUpload">Data de Upload:</label>
+                    <input type="text" id="dataUpload" readonly>
+                </div>
+            </div>
+
+            <button type="submit">Fazer Upload</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
